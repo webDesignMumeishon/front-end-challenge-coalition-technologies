@@ -302,6 +302,18 @@ main{
     justify-content: space-between;
 }
 
+.btn-form{
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    margin-top: 22px;
+    padding: 12px 22px;
+    font-size: 13px;
+    font-family: var(--font-family-v2);
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .p-address{
     margin-top: 12px;
 }
