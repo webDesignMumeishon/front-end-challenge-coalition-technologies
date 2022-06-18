@@ -1,6 +1,6 @@
 
 const body = document.getElementsByTagName('body')
-console.log(body)
+// console.log(body)
 
 
 // get all dropdowns
@@ -87,5 +87,21 @@ dropdowns.forEach(dropdowns => {
                 submenu.classList.add('sub-menu-open')
             }
         })
+    })
+})
+
+const icons = document.querySelectorAll('.icon-box')
+icons.forEach(icon => {
+    icon.addEventListener('click', () =>{
+        const checkIfSelected =  Object.values(icon.classList).includes('selected-icon')
+        if(checkIfSelected){
+            icon.classList.remove('selected-icon')
+        }
+        else{
+            icons.forEach(icon => {
+                icon.classList.remove('selected-icon')
+            })
+            icon.classList.add('selected-icon')
+        }
     })
 })
