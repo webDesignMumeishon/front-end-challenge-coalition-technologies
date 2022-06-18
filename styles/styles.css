@@ -73,7 +73,12 @@ header {
 }
 
 .top-bar{
-    color: var(--white)
+    color: var(--white);
+    padding: 10px 0;
+}
+
+.logo-wrapper{
+    padding: 20px 0;
 }
 
 .opacity-word{
@@ -257,9 +262,11 @@ main{
 
 .reach-us{
     color: var(--gray--reach-us);
+    width: 400px;
+
 }
 
-.us-wrapper div{
+.contact-us{
     width: 400px;
 }
 
@@ -314,6 +321,7 @@ main{
     cursor: pointer;
 }
 
+
 .p-address{
     margin-top: 12px;
 }
@@ -321,7 +329,25 @@ main{
 .p-contact-numbers{
     margin-top: 21px;
 }
+.icons-wrapper{
+    margin-top: 40px;
+    width: 160px;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.icon-box{
+    width: 33px;
+    height: 31px;
+    cursor: pointer;
+    background-color: var(--gray);
+}
 
+.icon-box:hover{
+    background-color: black;
+}
 
+.selected-icon{
+    background-color: black;
+}
 

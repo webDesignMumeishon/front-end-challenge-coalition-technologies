@@ -36,6 +36,10 @@ dropdowns.forEach(dropdowns => {
             menu.classList.remove('menu-open')
         })
 
+        submenusInDropdown.forEach(submenu => {
+            submenu.classList.remove('sub-menu-open')
+        })
+
         unselectClick.forEach(click =>{
             click.classList.remove('select-clicked')
         })
