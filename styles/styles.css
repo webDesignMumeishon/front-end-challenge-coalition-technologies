@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --orange: #ff6200;
+    --gray: #ededed;
+    --white: #f6f6f6;
+    --main-width: 60%;
+    --font-family-v1: 'Bebas Neue', cursive;
+    --divisor-pt: 1.3
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--white);
+}
+
+ul li{
+    display: inline-block;
+    font-size: 13px;
+
+}
+
+header { 
+    font-family: var( --font-family-v1);
+}
+
+.logo-title{
+    font-size: 41px;
+}
+
+.center-content{
+    display: flex;
+    width: var(--main-width);
+    margin: auto;
+}
+
+.space-between{
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+}
+
+.access{
+    font-size: 15px;
+}
+
+.background-orange {
+    background-color: var(--orange);
+}
+
+.background-gray {
+    background-color: var(--gray);
+}
+
+.top-bar{
+    color: var(--white)
+}
+
+.opacity-word{
+    color: rgba(0, 0, 0, 0.65);
+    opacity: 0.5;
+    padding-right: 5px;
+}
+
+.color-orange{
+    color: var(--orange);
+}
+
+.dropdown { 
+    min-width: 4em;
+    position: relative;
+}
+
+/* .dropdown * { 
+    box-sizing: border-box;
+} */
+
+.select{
+    color: black;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select span{
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+}
+
+.select span:hover{
+    border-bottom: solid var(--orange) 2px;
+
+}
+
+.select-clicked{
+    border-bottom: solid var(--orange) 2px;
+}
+
+.caret{
+    width: 0;
+    height: 0;
+}
+
+.menu{
+    list-style: none;
+    padding: 0.3em;
+    border: solid black 2px;
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li{
+    padding: 0.2em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    background-color: blueviolet;
+}
+
+/*
+*   Active style added in js
+*/
+
+.active{
+    background: red;
+}
+
+/*
+*   Open Styles added in JS
+*/
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+
+
