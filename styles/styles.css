@@ -6,7 +6,8 @@
     --white: #f6f6f6;
     --main-width: 60%;
     --font-family-v1: 'Bebas Neue', cursive;
-    --divisor-pt: 1.3
+    --divisor-pt: 1.3;
+    --menu-width: 4em;
 }
 
 * {
@@ -75,7 +76,7 @@ header {
 }
 
 .dropdown { 
-    min-width: 4em;
+    min-width: var(--menu-width);
     position: relative;
 }
 
@@ -99,12 +100,12 @@ header {
 }
 
 .select span:hover{
-    border-bottom: solid var(--orange) 2px;
+    border-bottom: solid var(--orange) 3px;
 
 }
 
 .select-clicked{
-    border-bottom: solid var(--orange) 2px;
+    border-bottom: solid var(--orange) 3px;
 }
 
 .caret{
@@ -138,6 +139,16 @@ header {
     background-color: blueviolet;
 }
 
+.submenu{
+    position: absolute;
+    border: solid black 2px;
+    width: 100%;
+    left: 5em;
+    /* margin-left: 10px; */
+    display: none;
+    opacity: 0;
+}
+
 /*
 *   Active style added in js
 */
@@ -150,6 +161,11 @@ header {
 *   Open Styles added in JS
 */
 .menu-open{
+    display: block;
+    opacity: 1;
+}
+
+.sub-menu-open{
     display: block;
     opacity: 1;
 }
