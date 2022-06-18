@@ -1,4 +1,8 @@
 
+const body = document.getElementsByTagName('body')
+console.log(body)
+
+
 // get all dropdowns
 const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -60,14 +64,24 @@ dropdowns.forEach(dropdowns => {
             //add active class to clicked option element
             option.classList.add('active')
 
-            submenusInDropdown.forEach(submenu => {
-                submenu.classList.remove('sub-menu-open')
+            const submenu = option.querySelector('.submenu')
+
+            const checkSubmenuOpen = submenu.className.split(" ").filter(classN => {
+                return classN === 'sub-menu-open'
             })
 
-            const submenu = option.querySelector('.submenu')
-            
-            //testing submenu
-            submenu.classList.add('sub-menu-open')
+            if(checkSubmenuOpen.length > 0){
+                //if there there is a sub-menu-open we close that one
+                submenu.classList.remove('sub-menu-open')
+            }
+            else{
+                //if there is not any sub-menu-open in that option element we remove all of then and add in 
+                //that particular option element
+                submenusInDropdown.forEach(submenu => {
+                    submenu.classList.remove('sub-menu-open')
+                })
+                submenu.classList.add('sub-menu-open')
+            }
         })
     })
 })
