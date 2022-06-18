@@ -4,10 +4,10 @@
     --orange: #ff6200;
     --gray: #ededed;
     --white: #f6f6f6;
-    --main-width: 60%;
+    --main-width: 974px;
     --font-family-v1: 'Bebas Neue', cursive;
     --divisor-pt: 1.3;
-    --menu-width: 97px;
+    --menu-width: 77px;
 }
 
 * {
@@ -136,8 +136,7 @@ header {
     border-radius: 0.5em;
     cursor: pointer;
     width: 100%;
-/* align-items: center; */
-text-align: center;
+    text-align: center;
 }
 
 .menu li:hover{
@@ -193,6 +192,14 @@ text-align: center;
 .sub-menu-open{
     display: block;
     opacity: 1;
+}
+
+/************************************************ Main ************************************************/
+
+main{
+    width: var(--main-width);
+    border: solid 2px;
+    margin: auto;
 }
 
 
