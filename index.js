@@ -10,8 +10,8 @@ dropdowns.forEach(dropdowns => {
     const menu = dropdowns.querySelector('.menu')
     const options = dropdowns.querySelectorAll('.menu li')
     const selected = dropdowns.querySelector('.selected')
+    const submenusInDropdown = dropdowns.querySelectorAll('.submenu')
 
-    const submenu = dropdowns.querySelector('.submenu')
 
     // console.log(submenus)
 
@@ -60,7 +60,12 @@ dropdowns.forEach(dropdowns => {
             //add active class to clicked option element
             option.classList.add('active')
 
+            submenusInDropdown.forEach(submenu => {
+                submenu.classList.remove('sub-menu-open')
+            })
 
+            const submenu = option.querySelector('.submenu')
+            
             //testing submenu
             submenu.classList.add('sub-menu-open')
         })

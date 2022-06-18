@@ -144,9 +144,20 @@ header {
     border: solid black 2px;
     width: 100%;
     left: 5em;
-    /* margin-left: 10px; */
     display: none;
     opacity: 0;
+}
+
+.submenu-1{
+    top: 0em;
+}
+
+.submenu-2{
+    top: 3em;
+}
+
+.submenu-3{
+    top: 5em;
 }
 
 /*
