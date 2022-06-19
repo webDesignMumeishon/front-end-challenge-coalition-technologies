@@ -9,17 +9,12 @@ const dropdowns = document.querySelectorAll('.dropdown');
 
 dropdowns.forEach(dropdowns => {
 
-
     const select = dropdowns.querySelector('.select')
     const menu = dropdowns.querySelector('.menu')
     const options = dropdowns.querySelectorAll('.menu li')
     const selected = dropdowns.querySelector('.selected')
     const submenusInDropdown = dropdowns.querySelectorAll('.submenu')
 
-
-    // console.log(submenus)
-
-    
 
     //add a click event to the select element
     select.addEventListener('click', () => {
