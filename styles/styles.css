@@ -331,7 +331,7 @@ main{
     margin-top: 21px;
 }
 .icons-wrapper{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     width: 180px;
     display: flex;
     justify-content: space-evenly;
@@ -351,4 +351,19 @@ main{
 .selected-icon{
     background-color: black;
 }
+
+.body-height{
+    height: 223px;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.position-icons-wrapper{
+    position: absolute;
+    bottom: 0;
+}
+
+
 
