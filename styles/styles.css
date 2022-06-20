@@ -43,9 +43,13 @@ header {
 }
 
 .center-content{
-    display: flex;
     width: var(--main-width);
     margin: auto;
+}
+
+.flex-space-between{
+    display: flex;
+    justify-content: space-between;
 }
 
 .space-between{
@@ -60,10 +64,6 @@ header {
     font-size: 15px;
 }
 
-.background-orange {
-    background-color: var(--orange);
-}
-
 .background-gray {
     background-color: var(--gray);
 }
@@ -71,6 +71,8 @@ header {
 .top-bar{
     color: var(--white);
     padding: 10px 0;
+    background-color: var(--orange);
+
 }
 
 .logo-wrapper{
@@ -97,11 +99,8 @@ header {
 /* .dropdown * { 
     box-sizing: border-box;
 } */
-
 .select{
     color: black;
-    justify-content: space-between;
-    display: flex;
     align-items: center;
     cursor: pointer;
     transition: background 0.3s;
@@ -120,11 +119,6 @@ header {
 
 .select-clicked{
     border-bottom: solid var(--orange) 3px;
-}
-
-.caret{
-    width: 0;
-    height: 0;
 }
 
 .menu{
@@ -208,12 +202,6 @@ header {
     opacity: 1;
 }
 
-
-main{
-    width: var(--main-width);
-    margin: auto;
-}
-
 .path{
     height: 100px;
     display: flex;
@@ -249,8 +237,6 @@ main{
 
 .us-wrapper{
     margin-top: 56px;
-    display: flex;
-    justify-content: space-between;
     padding: 0 15px; 
 }
 
@@ -325,15 +311,11 @@ main{
     margin-top: 12px;
 }
 
-.p-contact-numbers{
+.contact-numbers{
     margin-top: 21px;
 }
-.icons-wrapper{
-    /* margin-top: 40px; */
-    width: 180px;
-    display: flex;
-    justify-content: space-evenly;
-}
+
+
 
 .icon-box{
     width: 33px;
@@ -356,14 +338,16 @@ main{
     height: 223px;
 }
 
-.position-relative{
-    position: relative;
-}
 
-.position-icons-wrapper{
+
+.icons-wrapper{
+    width: 180px;
+    display: flex;
+    justify-content: space-evenly;
     position: absolute;
     bottom: 0;
 }
+
 
 ion-icon{
     color: white;
