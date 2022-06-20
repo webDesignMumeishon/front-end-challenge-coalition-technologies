@@ -13,6 +13,8 @@ const closeAllSubMenus = () => {
     })
 }
 
+// const unselectClickedElements = () => 
+
 const body = document.getElementsByTagName('body')[0]
 
 body.addEventListener('click', (e) => {
@@ -36,7 +38,8 @@ dropdowns.forEach(dropdowns => {
 
     //add a click event to the select element
     select.addEventListener('click', (e) => {
-        //add clicked select style to the select element
+
+        //this is to avoid triggering the click event in the element
         e.stopPropagation();
         
         const unselectMenus = document.querySelectorAll('.menu-open')
@@ -65,17 +68,8 @@ dropdowns.forEach(dropdowns => {
         //add a click event to the option element
         option.addEventListener('click', (e) => {
 
-            // e.preventDefault();
+            //this is to avoid triggering the click event in the element
             e.stopPropagation();
-
-            //change selected inner text to the clicked option text
-            // selected.innerText = option.innerText
-
-            //add the clicked select styles to the select elements
-            // selected.classList.remove('select-clicked')
-
-            //add the open styles to the menu element
-            // menu.classList.remove('menu-open')
 
             //remove active class from all option elements
             options.forEach(option => {
@@ -98,9 +92,7 @@ dropdowns.forEach(dropdowns => {
             else{
                 //if there is not any sub-menu-open in that option element we remove all of then and add in 
                 //that particular option element
-                submenusInDropdown.forEach(submenu => {
-                    submenu.classList.remove('sub-menu-open')
-                })
+                closeAllSubMenus()
                 submenu.classList.add('sub-menu-open')
             }
         })
