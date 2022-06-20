@@ -143,9 +143,6 @@ header {
     color: var(--menu-text-color);
     background-color: var(--white);
     letter-spacing: 1px;
-
-
-
 }
 
 .menu li{
@@ -193,7 +190,6 @@ header {
 /*
 *   Active style added in js
 */
-
 .active{
     color: black;
     /* font-weight: 800; */
