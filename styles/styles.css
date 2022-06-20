@@ -243,7 +243,6 @@ header {
 .reach-us{
     color: var(--gray--reach-us);
     width: 400px;
-
 }
 
 .contact-us{
@@ -251,7 +250,6 @@ header {
 }
 
 .margin-wrapper{
-    /* padding: 10px 0; */
     margin: 20px 0;
 }
 
@@ -286,12 +284,6 @@ header {
     font-size: 14px;
     height: 150px;
     padding: 5px;
-}
-
-.inputs-wrapper{
-    display: flex;
-    margin: 10px 0;
-    justify-content: space-between;
 }
 
 .btn-form{
