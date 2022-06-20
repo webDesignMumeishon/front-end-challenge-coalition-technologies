@@ -1,6 +1,24 @@
 
-const body = document.getElementsByTagName('body')
-// console.log(body)
+const closeAllMenuTabs = () => {
+    const unselectMenus = document.querySelectorAll('.menu-open')
+    unselectMenus.forEach(menu =>{
+        menu.classList.remove('menu-open')
+    })
+}
+
+const closeAllSubMenus = () => {
+    const submenusInDropdown = document.querySelectorAll('.sub-menu-open')
+    submenusInDropdown.forEach(submenu => {
+        submenu.classList.remove('sub-menu-open')
+    })
+}
+
+const body = document.getElementsByTagName('body')[0]
+
+body.addEventListener('click', (e) => {
+    closeAllSubMenus()
+    closeAllMenuTabs()
+})
 
 
 // get all dropdowns
@@ -17,8 +35,9 @@ dropdowns.forEach(dropdowns => {
 
 
     //add a click event to the select element
-    select.addEventListener('click', () => {
+    select.addEventListener('click', (e) => {
         //add clicked select style to the select element
+        e.stopPropagation();
         
         const unselectMenus = document.querySelectorAll('.menu-open')
         const unselectClick = document.querySelectorAll('.select-clicked')
@@ -44,7 +63,10 @@ dropdowns.forEach(dropdowns => {
     //loop through all options elements
     options.forEach(option => {
         //add a click event to the option element
-        option.addEventListener('click', () => {
+        option.addEventListener('click', (e) => {
+
+            // e.preventDefault();
+            e.stopPropagation();
 
             //change selected inner text to the clicked option text
             // selected.innerText = option.innerText
