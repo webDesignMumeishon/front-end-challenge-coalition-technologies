@@ -76,10 +76,7 @@ dropdowns.forEach(dropdowns => {
             option.classList.add('active')
 
             const submenu = option.querySelector('.submenu')
-
-            const checkSubmenuOpen = submenu.className.split(" ").filter(classN => {
-                return classN === 'sub-menu-open'
-            })
+            const checkSubmenuOpen = Object.values(submenu.classList).includes('sub-menu-open')
 
             if(checkSubmenuOpen.length > 0){
                 //if there there is a sub-menu-open we close that one
