@@ -40,9 +40,7 @@ body.addEventListener('click', (e) => {
 // get all dropdowns
 const dropdowns = document.querySelectorAll('.dropdown');
 
-
 dropdowns.forEach(dropdowns => {
-
     const select = dropdowns.querySelector('.select')
     const menu = dropdowns.querySelector('.menu')
     const options = dropdowns.querySelectorAll('.menu li')
