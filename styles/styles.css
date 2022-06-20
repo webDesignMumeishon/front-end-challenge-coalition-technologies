@@ -199,6 +199,9 @@ header {
 .path{
     height: 100px;
     display: flex;
+    font-size: 14px;
+    font-family: var(--font-family-v2);
+    font-weight: 600;
 }
 
 .path p{
@@ -244,6 +247,9 @@ header {
 
 .margin-wrapper{
     margin: 20px 0;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--font-family-v2);
 }
 
 .us-titles{
@@ -320,8 +326,7 @@ header {
 }
 
 .icons-wrapper{
-    width: 180px;
-    justify-content: space-evenly;
+    width: 155px;
     position: absolute;
     bottom: 0;
 }
