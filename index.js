@@ -1,6 +1,9 @@
 
-const closeAllMenuTabs = () => {
+const closeAllMenuTabs = (menu) => {
     const unselectMenus = document.querySelectorAll('.menu-open')
+    if(menu){
+        menu.classList.toggle('menu-open')
+    }
     unselectMenus.forEach(menu =>{
         menu.classList.remove('menu-open')
     })
@@ -13,13 +16,24 @@ const closeAllSubMenus = () => {
     })
 }
 
-// const unselectClickedElements = () => 
+const unselectClickedElements = (selected) => {
+
+    const unselectClick = document.querySelectorAll('.select-clicked')
+    if(selected){
+        selected.classList.toggle('select-clicked')
+
+    }
+    unselectClick.forEach(click =>{
+        click.classList.remove('select-clicked')
+    })
+}
+
 
 const body = document.getElementsByTagName('body')[0]
-
 body.addEventListener('click', (e) => {
     closeAllSubMenus()
     closeAllMenuTabs()
+    unselectClickedElements()
 })
 
 
@@ -33,33 +47,15 @@ dropdowns.forEach(dropdowns => {
     const menu = dropdowns.querySelector('.menu')
     const options = dropdowns.querySelectorAll('.menu li')
     const selected = dropdowns.querySelector('.selected')
-    const submenusInDropdown = dropdowns.querySelectorAll('.submenu')
-
 
     //add a click event to the select element
     select.addEventListener('click', (e) => {
-
         //this is to avoid triggering the click event in the element
         e.stopPropagation();
-        
-        const unselectMenus = document.querySelectorAll('.menu-open')
-        const unselectClick = document.querySelectorAll('.select-clicked')
-        
-        selected.classList.toggle('select-clicked')
-        menu.classList.toggle('menu-open')
 
-
-        unselectMenus.forEach(menu =>{
-            menu.classList.remove('menu-open')
-        })
-
-        submenusInDropdown.forEach(submenu => {
-            submenu.classList.remove('sub-menu-open')
-        })
-
-        unselectClick.forEach(click =>{
-            click.classList.remove('select-clicked')
-        })
+        closeAllMenuTabs(menu)
+        closeAllSubMenus()
+        unselectClickedElements(selected)
     })
 
 
